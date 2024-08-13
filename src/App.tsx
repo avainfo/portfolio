@@ -1,7 +1,15 @@
 import React from 'react';
 import './App.scss';
+import {HeaderTitle} from "./components/header/HeaderTitle";
 
 function App() {
+	let header: Array<string> = [
+		"Home",
+		"About",
+		"Projects",
+		"Contacts",
+	];
+
 	return (
 		<div className="app">
 			<link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -12,8 +20,11 @@ function App() {
 			<div className="mainPage">
 				<div className="header">
 					<div className="left">
+						<img src="/assets/profilepic.png" alt=""/>
+						<HeaderTitle title="Do Souto Antonin"/>
 					</div>
 					<div className="right">
+						{header.map((title, index) => <HeaderTitle title={title} key={index}/>)}
 					</div>
 				</div>
 				<div className="content"></div>

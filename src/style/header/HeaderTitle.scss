@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.headerTitle {
+	text-align: center;
+	font-family: 'Inter', sans-serif;
+	color: #E6E6E6;
+	font-size: calc(100vh / 37);
+	font-weight: 600;
+	height: 100%;
+	min-width: fit-content;;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	white-space: nowrap;
+}
