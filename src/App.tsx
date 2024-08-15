@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import {HeaderTitle} from "./components/header/HeaderTitle";
+import {HeaderButton} from "./components/header/HeaderButton";
 
 function App() {
 	let header: Array<string> = [
@@ -25,6 +26,7 @@ function App() {
 					</div>
 					<div className="right">
 						{header.map((title, index) => <HeaderTitle title={title} key={index}/>)}
+						<HeaderButton title={"Download CV"}/>
 					</div>
 				</div>
 				<div className="content"></div>
