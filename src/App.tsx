@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.scss';
 import {HeaderTitle} from "./components/header/HeaderTitle";
-import {HeaderButton} from "./components/header/HeaderButton";
+import {Header} from "./components/header/Header";
+import {Links} from "./components/utils/Links";
 
 function App() {
 	let header: Array<string> = [
@@ -13,22 +14,9 @@ function App() {
 
 	return (
 		<div className="app">
-			<link rel="preconnect" href="https://fonts.googleapis.com"/>
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-			<link
-				href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-				rel="stylesheet"/>
+			<Links/>
 			<div className="mainPage">
-				<div className="header">
-					<div className="left">
-						<img src="/assets/profilepic.png" alt=""/>
-						<HeaderTitle title="Do Souto Antonin"/>
-					</div>
-					<div className="right">
-						{header.map((title, index) => <HeaderTitle title={title} key={index}/>)}
-						<HeaderButton title={"Download CV"}/>
-					</div>
-				</div>
+				<Header strings={header} callbackFunction={(title, index) => <HeaderTitle title={title} key={index}/>}/>
 				<div className="content"></div>
 			</div>
 			<div className="infos"></div>
