@@ -51,28 +51,6 @@
 	width: 100%;
 	margin: 0;
 	padding: 0;
-
-	.header {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		padding: {
-			left: 8%;
-			top: 25px;
-			right: 8%;
-		};
-		height: fit-content;
-
-		> * {
-			display: flex;
-			flex-direction: row;
-			column-gap: calc(100vw / 60);
-		}
-
-		img {
-			height: calc(100vh / 17.5);
-		}
-	}
 }
 
 .infos {

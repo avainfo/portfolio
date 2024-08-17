@@ -15,9 +15,11 @@ function App() {
 	return (
 		<div className="app">
 			<Links/>
+			<Header strings={header} callbackFunction={(title, index) => <HeaderTitle title={title} key={index}/>}/>
 			<div className="mainPage">
-				<Header strings={header} callbackFunction={(title, index) => <HeaderTitle title={title} key={index}/>}/>
-				<div className="content"></div>
+				<div className="content">
+
+				</div>
 			</div>
 			<div className="infos"></div>
 			<div className="projects"></div>

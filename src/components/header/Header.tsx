@@ -1,6 +1,7 @@
 import React from "react";
 import {HeaderTitle} from "./HeaderTitle";
 import {HeaderButton} from "./HeaderButton";
+import "../../style/header/Header.scss"
 
 export function Header(props: {
 	strings: Array<string>,
