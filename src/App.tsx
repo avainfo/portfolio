@@ -3,6 +3,7 @@ import './App.scss';
 import {HeaderTitle} from "./components/header/HeaderTitle";
 import {Header} from "./components/header/Header";
 import {Links} from "./components/utils/Links";
+import {Card} from "./components/card/Card";
 
 function App() {
 	let header: Array<string> = [
@@ -20,6 +21,7 @@ function App() {
 				<div className="content">
 
 				</div>
+				<Card/>
 			</div>
 			<div className="infos"></div>
 			<div className="projects"></div>
