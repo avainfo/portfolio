@@ -14,6 +14,7 @@ $headerW : calc($w - (2 * ($w / 10)));
 	};
 	height: fit-content;
 	width: $headerW;
+	z-index: 3;
 
 	> * {
 		display: flex;
