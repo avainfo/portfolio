@@ -1,5 +1,9 @@
 @import "style/variables";
 
+body {
+	overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
 	width: 1vw;
 	transition: 0.3s ease-in-out;
