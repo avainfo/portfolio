@@ -2,11 +2,18 @@ import React from "react";
 import "../../style/header/HeaderTitle.scss"
 
 interface HeaderTitleProps {
-	title?: string
+	title?: string,
+	scrollTo: number
 }
 
-export function HeaderTitle({title}: HeaderTitleProps) {
+export function HeaderTitle({title, scrollTo}: HeaderTitleProps) {
 	return (
-		<div className="headerTitle">{title}</div>
+		<div
+			className="headerTitle"
+			onClick={() => {
+				window.scrollTo({top: scrollTo * window.innerHeight, behavior: "smooth"});
+			}}>
+			{title}
+		</div>
 	);
 }

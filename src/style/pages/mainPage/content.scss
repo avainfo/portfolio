@@ -1,0 +1,31 @@
+@import "../../variables";
+
+.content {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	margin-left: calc($w / 10);
+	font-family: 'Inter', sans-serif;
+	letter-spacing: 2.5px;
+
+	.introduction {
+		font-size: 2em;
+		font-weight: bold;
+		color: $red;
+	}
+
+	.name {
+		font-size: 3.5em;
+		font-weight: bold;
+		color: #D4D4D4;
+		margin-bottom: 2vh;
+	}
+
+	.jobsTitle {
+		font-size: 2.5em;
+		font-weight: bold;
+		color: $red;
+	}
+}

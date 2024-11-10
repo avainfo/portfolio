@@ -3,8 +3,7 @@ import './App.scss';
 import {HeaderTitle} from "./components/header/HeaderTitle";
 import {Header} from "./components/header/Header";
 import {Links} from "./components/utils/Links";
-import {CardEffect} from "./components/card/CardEffect";
-import {Card} from "./components/card/Card";
+import {MainPage} from "./components/pages/MainPage";
 
 function App() {
 	let header: Array<string> = [
@@ -19,14 +18,12 @@ function App() {
 	return (
 		<div className="app">
 			<Links/>
-			<Header strings={header} callbackFunction={(title, index) => <HeaderTitle title={title} key={index}/>}/>
-			<div className="mainPage">
-				<div className="content">
-
-				</div>
-				<Card event={(value) => setBackgroundUrl(value)}/>
-				<CardEffect backgroundUrl={backgroundUrl}/>
-			</div>
+			<Header
+				strings={header}
+				callbackFunction={(title, index) => {
+					return <HeaderTitle title={title} key={index} scrollTo={index * 100}/>;
+				}}/>
+			<MainPage event={(value) => setBackgroundUrl(value)} backgroundUrl={backgroundUrl}/>
 			<div className="infos"></div>
 			<div className="projects"></div>
 		</div>

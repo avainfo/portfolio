@@ -10,11 +10,11 @@ export function Header(props: {
 	return <div className="header">
 		<div className="left">
 			<img src="/assets/profilepic.png" alt=""/>
-			<HeaderTitle title="Do Souto Antonin"/>
+			<HeaderTitle title="Do Souto Antonin" scrollTo={0}/>
 		</div>
 		<div className="right">
 			{props.strings.map(props.callbackFunction)}
-			<HeaderButton title={"Download CV"}/>
+			<HeaderButton title={"Hire Me"}/>
 		</div>
 	</div>;
 }
