@@ -15,45 +15,8 @@ $cardHeight: calc($cardWidth / $cardRatio);
 	filter: blur(75px);
 	overflow-x: unset;
 	z-index: 1;
-
-	> .inner {
-		width: 100%;
-		height: 100%;
-		transform-style: preserve-3d;
-		position: relative;
-		animation: flipp-scale-down-ver 0.3s ease-in-out both;
-		animation-fill-mode: forwards;
-	}
-
-	.front, .back {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		backface-visibility: hidden;
-	}
-
-	.front {
-		z-index: 2;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		> img {
-			width: 100%;
-		}
-	}
-
-	.back {
-		transform: rotateX(180deg);
-		z-index: 1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		> img {
-			width: 100%;
-		}
-	}
+	background-size: cover;
+	transition-duration: 0.3s;
 }
 
 

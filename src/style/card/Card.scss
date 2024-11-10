@@ -12,6 +12,7 @@ $cardHeight: calc($cardWidth / $cardRatio);
 	height: $cardHeight;
 	perspective: 1000px;
 	z-index: 2;
+	cursor: pointer;
 
 	> .inner {
 		width: 100%;

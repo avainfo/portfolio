@@ -1,16 +1,11 @@
 import React from "react";
 import "../../style/card/CardEffect.scss";
 
-export function CardEffect() {
+interface CardEffectProps {
+	backgroundUrl: string,
+}
 
-	return <div className="card-effect">
-		<div className="inner">
-			<div className="front">
-				<img src="/assets/card-front.png" alt=""/>
-			</div>
-			<div className="back">
-				<img src="/assets/card-back.png" alt=""/>
-			</div>
-		</div>
+export function CardEffect({backgroundUrl}: CardEffectProps) {
+	return <div className="card-effect" style={{backgroundImage: `url(${backgroundUrl})`}}>
 	</div>
 }
