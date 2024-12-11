@@ -1,5 +1,5 @@
 import React from "react";
-import "../../style/card/CardEffect.scss";
+import "../../style/components/card/CardEffect.scss";
 
 interface CardEffectProps {
 	backgroundUrl: string,
