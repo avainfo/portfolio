@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.scss';
 import {HeaderTitle} from "./components/header/HeaderTitle";
 import {Header} from "./components/header/Header";
 import {Links} from "./components/utils/Links";
 import {MainPage} from "./components/pages/MainPage";
 import {loadEvents} from "./script/eventListener";
+import {InfosPage} from "./components/pages/InfosPage";
 
 function App() {
 	let header: Array<string> = [
@@ -14,9 +15,33 @@ function App() {
 		"Contacts",
 	];
 
-	const [backgroundUrl, setBackgroundUrl] = React.useState("/assets/card-front.png");
+	const [backgroundUrl, setBackgroundUrl] = useState("/assets/card-front.png");
+	const [currentScrollPos, setCurrentScrollPos] = useState(0);
 
 	loadEvents();
+
+	const handleScroll = (event: any) => {
+		event.preventDefault();
+		const viewportHeight = window.innerHeight;
+		let newScrollPos = currentScrollPos;
+
+		if (event.deltaY > 0) {
+			newScrollPos = Math.min(currentScrollPos + viewportHeight, document.body.scrollHeight - viewportHeight);
+		} else {
+			newScrollPos = Math.max(currentScrollPos - viewportHeight, 0);
+		}
+
+		setCurrentScrollPos(newScrollPos);
+		window.scrollTo({
+			top: newScrollPos,
+			behavior: 'smooth'
+		});
+	};
+
+	useEffect(() => {
+		window.addEventListener('wheel', handleScroll, {passive: false});
+		return () => window.removeEventListener('wheel', handleScroll);
+	}, [currentScrollPos]);
 
 	return (
 		<div className="app">
@@ -28,6 +53,7 @@ function App() {
 				}}/>
 			<MainPage event={(value) => setBackgroundUrl(value)} backgroundUrl={backgroundUrl}/>
 			<div className="infos"></div>
+			<InfosPage/>
 			<div className="projects"></div>
 		</div>
 	);
