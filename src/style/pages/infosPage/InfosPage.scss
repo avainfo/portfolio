@@ -1,0 +1,26 @@
+@import "../../variables";
+
+.infos {
+	width: calc(100%);
+	background: aquamarine;
+	display: flex;
+	flex-direction: row;
+
+	.info-part {
+		width: calc(50% - (100vw * 0.05) * 2);
+		background: red;
+		margin: {
+			left: calc(100vw * 0.05);
+			right: calc(100vw * 0.05);
+		};
+	}
+
+	.skill-part {
+		width: calc(50% - (100vw * 0.05) * 2);
+		background: red;
+		margin: {
+			left: calc(100vw * 0.05);
+			right: calc(100vw * 0.05);
+		};
+	}
+}

@@ -14,7 +14,7 @@ export function Header(props: {
 		</div>
 		<div className="right">
 			{props.strings.map(props.callbackFunction)}
-			<HeaderButton title={"Hire Me"}/>
+			<HeaderButton title={"Contact me"}/>
 		</div>
 	</div>;
 }
