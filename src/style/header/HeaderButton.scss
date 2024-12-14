@@ -5,20 +5,22 @@
 	text-align: center;
 	font-family: 'Inter', sans-serif;
 	color: white;
-	font-size: calc(100vw / 90);
-	font-weight: 700;
-	height: calc(100% - 6px);
+	font-size: calc(100vw / 80);
+	font-weight: 600;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	border: 3px solid $red;
 	background: $red;
-	padding: 0 calc(100vw / 40);
+	//padding: 0 calc(100vw / 80);
+	width: calc(100vw * 0.112429);
+	height: calc(100vh / 18);
 	border-radius: 10px;
 	transition-duration: 0.3s;
 	cursor: pointer;
 	overflow-x: unset;
+	letter-spacing: 1px;
 }
 
 .headerButton:hover {
