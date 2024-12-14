@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/pages/infosPage/InfosPage.scss"
 import {HeaderButton} from "../components/header/HeaderButton";
+import {SkillBar} from "../components/skills/SkillBar";
 
 export function InfosPage() {
 
@@ -10,7 +11,7 @@ export function InfosPage() {
 		["Website development", 90],
 		["API", 85],
 		["Embedded systems", 80],
-		["Pentesting", 80],
+		["Pentesting", 75],
 	];
 
 	function test() {
@@ -36,7 +37,7 @@ export function InfosPage() {
 					{
 						techSkills.map(skill => {
 							return <div>
-								<div>{skill[0]}</div>
+								<SkillBar skill={skill} />
 							</div>
 						})
 					}

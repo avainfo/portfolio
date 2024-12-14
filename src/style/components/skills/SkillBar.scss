@@ -1,0 +1,30 @@
+@import "../../variables";
+
+.skill-bar {
+  font-weight: lighter;
+  font-size: calc(100vw / 75);
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .skill-title {
+	width: 50%;
+  }
+
+  .bar {
+	background: rgba(255, 255, 255, 0.15);
+	width: 50%;
+	height: 7.5px;
+	border-radius: 15px;
+
+	.active-bar {
+	  background: $red;
+	  height: 7.5px;
+	  border-radius: 15px;
+	}
+  }
+}
