@@ -1,8 +1,24 @@
 import React from "react";
-import "../../style/pages/infosPage/InfosPage.scss"
-import {HeaderButton} from "../header/HeaderButton";
+import "../style/pages/infosPage/InfosPage.scss"
+import {HeaderButton} from "../components/header/HeaderButton";
 
 export function InfosPage() {
+
+	const techSkills = [
+		["Mobile applications", 95],
+		["Software development", 95],
+		["Website development", 90],
+		["API", 85],
+		["Embedded systems", 80],
+		["Pentesting", 80],
+	];
+
+	function test() {
+		console.log(techSkills);
+	}
+
+	test();
+
 	return (
 		<div className="infos">
 			<div className="info-part">
@@ -15,7 +31,19 @@ export function InfosPage() {
 				</div>
 				<HeaderButton title="Contact me"/>
 			</div>
-			<div className="skill-part"></div>
+			<div className="skill-part">
+				<div className="skill-bars">
+					{
+						techSkills.map(skill => {
+							return <div>
+								<div>{skill[0]}</div>
+							</div>
+						})
+					}
+				</div>
+				<div className="skill-rounds">
+				</div>
+			</div>
 		</div>
 	);
 }

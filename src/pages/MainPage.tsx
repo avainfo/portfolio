@@ -1,7 +1,7 @@
 import React from "react";
-import {CardEffect} from "../card/CardEffect";
-import {Card} from "../card/Card";
-import "../../style/pages/mainPage/Content.scss";
+import {CardEffect} from "../components/card/CardEffect";
+import {Card} from "../components/card/Card";
+import "../style/pages/mainPage/Content.scss";
 
 export function MainPage(props: { event: (value: string) => void, backgroundUrl: string }) {
 	return <div className="mainPage">

@@ -6,7 +6,7 @@ interface CardProps {
 }
 
 export function Card({event}: CardProps) {
-	const [isHovered, setIsHovered] = useState(false);
+	const [, setIsHovered] = useState(false);
 
 	return (
 		<div className="card"

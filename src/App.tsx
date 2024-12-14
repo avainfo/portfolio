@@ -3,8 +3,8 @@ import './App.scss';
 import {HeaderTitle} from "./components/header/HeaderTitle";
 import {Header} from "./components/header/Header";
 import {Links} from "./components/utils/Links";
-import {MainPage} from "./components/pages/MainPage";
-import {InfosPage} from "./components/pages/InfosPage";
+import {MainPage} from "./pages/MainPage";
+import {InfosPage} from "./pages/InfosPage";
 
 function App() {
 	let header: Array<string> = [
