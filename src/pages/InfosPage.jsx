@@ -35,10 +35,8 @@ export function InfosPage() {
 			<div className="skill-part">
 				<div className="skill-bars">
 					{
-						techSkills.map(skill => {
-							return <div>
-								<SkillBar skill={skill} />
-							</div>
+						techSkills.map((skill) => {
+							return <SkillBar skill={[...skill]} key={i}/>
 						})
 					}
 				</div>
