@@ -20,3 +20,14 @@
 		color: white;
 	}
 }
+
+
+@media (max-width: 1000px) {
+	.headerTitle {
+		font-size: 1em;
+	}
+
+	.left > .headerTitle {
+		display: none;
+	}
+}

@@ -1,30 +1,50 @@
 @import "../../variables";
 
 .skill-bar {
-  font-weight: lighter;
-  font-size: calc(100vw / 75);
-  text-transform: uppercase;
-  color: white;
-  letter-spacing: 2px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+	font-weight: lighter;
+	font-size: calc(100vw / 75);
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: 2px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 
-  .skill-title {
-	width: 50%;
-  }
-
-  .bar {
-	background: rgba(255, 255, 255, 0.15);
-	width: 50%;
-	height: 7.5px;
-	border-radius: 15px;
-
-	.active-bar {
-	  background: $red;
-	  height: 7.5px;
-	  border-radius: 15px;
+	.skill-title {
+		width: 50%;
 	}
-  }
+
+	.bar {
+		background: rgba(255, 255, 255, 0.15);
+		width: 50%;
+		height: 7.5px;
+		border-radius: 15px;
+
+		.active-bar {
+			background: $red;
+			height: 7.5px;
+			border-radius: 15px;
+		}
+	}
+}
+
+
+@media (max-width: 1000px) {
+	.skill-bar {
+		flex-direction: column;
+		font-size: 0.7em;
+		width: 100%;
+
+
+		.skill-title {
+			width: 100%;
+			margin-bottom: 10px;
+			margin-top: 20px;
+		}
+
+		.bar {
+			width: 100%;
+		}
+	}
 }

@@ -82,3 +82,14 @@ $cardHeight: calc($cardWidth / $cardRatio);
 		transform: scale(1) rotateX(0deg);
 	}
 }
+
+@media (max-width: 1000px) {
+	.card {
+		$cardWidth: calc($w / 2);
+		$cardHeight: calc($cardWidth / $cardRatio);
+		top: calc(160vh / 2 - ($cardHeight / 2));
+		right: calc($w / 2 - ($cardWidth / 2));
+		width: $cardWidth;
+		height: $cardHeight;
+	}
+}

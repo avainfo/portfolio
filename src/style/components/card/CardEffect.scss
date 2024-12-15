@@ -43,3 +43,10 @@ $cardHeight: calc($cardWidth / $cardRatio);
 		transform: scale(1.75) rotateX(0);
 	}
 }
+
+@media (max-width: 1000px) {
+	.card-effect {
+		top: calc(160vh / 2 - ($cardHeight / 2));
+		right: calc($w / 2 - ($cardWidth / 2));
+	}
+}

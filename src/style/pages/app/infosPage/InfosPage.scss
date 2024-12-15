@@ -1,60 +1,103 @@
 @import "../../../variables";
 
 .infos {
-  width: calc(100%);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  .info-part {
-	width: calc(50% - (100vw * 0.05) * 2);
-	margin: {
-	  left: calc(100vw * 0.05);
-	  right: calc(100vw * 0.05);
-	};
-
-	.info-title {
-	  font-size: calc(100vw / 40);
-	  font-weight: bold;
-	  color: $red;
-	}
-
-	.info-desc {
-	  font-weight: lighter;
-	  font-size: calc(100vw / 65);
-	  text-align: justify;
-	  line-height: 1.75;
-	  color: white;
-	  margin: calc(100vw / 35) 0;
-	}
-  }
-
-  .skill-part {
-	width: calc(50% - (100vw * 0.05) * 2);
-	height: 75vh;
+	width: calc(100%);
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	row-gap: 5vh;
-	margin: {
-	  left: calc(100vw * 0.05);
-	  right: calc(100vw * 0.05);
-	};
+	flex-direction: row;
+	align-items: center;
 
-	.skill-bars {
-	  margin-top: 10vh;
-	  height: 25vh;
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: space-between;
+	.info-part {
+		width: calc(50% - (100vw * 0.05) * 2);
+		margin: {
+			left: calc(100vw * 0.05);
+			right: calc(100vw * 0.05);
+		};
+
+		.info-title {
+			font-size: calc(100vw / 40);
+			font-weight: bold;
+			color: $red;
+		}
+
+		.info-desc {
+			font-weight: lighter;
+			font-size: calc(100vw / 65);
+			text-align: justify;
+			line-height: 1.75;
+			color: white;
+			margin: calc(100vw / 35) 0;
+		}
 	}
 
-	.skill-rounds {
-	  height: 25vh;
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: space-between;
-	  align-items: center;
+	.skill-part {
+		width: calc(50% - (100vw * 0.05) * 2);
+		height: 75vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 5vh;
+		margin: {
+			left: calc(100vw * 0.05);
+			right: calc(100vw * 0.05);
+		};
+
+		.skill-bars {
+			margin-top: 10vh;
+			height: 25vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.skill-rounds {
+			height: 25vh;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
-  }
+}
+
+
+@media (max-width: 1000px) {
+	.infos {
+		flex-direction: column;
+		height: unset;
+
+		.info-part {
+			margin: 0;
+			width: 75%;
+
+			.info-title {
+				font-size: 2em;
+			}
+
+			.info-desc {
+				font-size: 1em;
+			}
+
+			.headerButton {
+				width: 50%;
+			}
+		}
+
+		.skill-part {
+			margin: 0;
+			width: 75%;
+			height: unset;
+
+			.skill-bars {
+				height: unset;
+			}
+
+			.skill-rounds {
+				height: unset;
+				flex-wrap: wrap;
+				justify-content: center;
+				column-gap: 7.5vw;
+			}
+		}
+	}
+
 }
