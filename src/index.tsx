@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
 	<React.StrictMode>
-		<BrowserRouter basename="/<nom-du-repository>"> {/* Ajouter le basename */}
+		<BrowserRouter basename="/index">
 			<App />
 		</BrowserRouter>
 	</React.StrictMode>
