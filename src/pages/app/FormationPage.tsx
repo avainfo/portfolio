@@ -5,8 +5,8 @@ export function FormationPage() {
 
     const formations = [
         ["OpenClassrooms", "formations/OpenClassrooms"],
-        ["CEH: HCI", "formations/Hacking Cloud Infrastructure"],
-        ["CEH: SHPE", "formations/System Hacking and Privilege Escalation"],
+        ["CEH: HCI", "formations/Hacking_Cloud_Infrastructure"],
+        ["CEH: SHPE", "formations/System_Hacking_and_Privilege_Escalation"],
         ["AWS", "formations/AWS"],
         ["Bac", "formations/Bac"],
     ]

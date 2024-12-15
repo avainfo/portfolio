@@ -1,8 +1,7 @@
-import {useLocation, useParams} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import "../../style/pages/ProjectInfosPage.scss";
 
 export function ProjectInfosPage() {
-    let {id} = useParams();
     const location = useLocation();
     const {project} = location.state;
     if (!project) return <div>Project not found</div>;
@@ -14,7 +13,7 @@ export function ProjectInfosPage() {
         }}>
             <div className="left">
                 <div>{project.title}</div>
-                <img src={"/assets/" + project.path + ".png"} alt={project.title}/>
+                <img src={process.env.PUBLIC_URL + "/assets/" + project.path + ".png"} alt={project.title}/>
             </div>
             <div className="right">
                 <p className="text"></p>

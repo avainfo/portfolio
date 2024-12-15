@@ -14,11 +14,10 @@ function App() {
     let header: Array<string> = [
         "Home",
         "About",
-        "Projects",
-        "Contacts",
+        "Projects"
     ];
 
-    const [backgroundUrl, setBackgroundUrl] = useState("/assets/card-front.png");
+    const [backgroundUrl, setBackgroundUrl] = useState(`${process.env.PUBLIC_URL}/assets/card-front.png`);
 
     return (
         <BrowserRouter basename="/portfolio">

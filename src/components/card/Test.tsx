@@ -89,7 +89,7 @@ export function Test() {
 		return <div className="card">
 			<div className="inner">
 				<div className="front">
-					<img src="/assets/card-front.png" alt=""/>
+					<img src={process.env.PUBLIC_URL + "/assets/card-front.png"} alt=""/>
 				</div>
 				<div className="back">
 					<Particles
