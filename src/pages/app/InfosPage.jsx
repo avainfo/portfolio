@@ -1,8 +1,8 @@
 import React from "react";
-import "../style/pages/infosPage/InfosPage.scss"
-import {HeaderButton} from "../components/header/HeaderButton";
-import {SkillBar} from "../components/skills/SkillBar";
-import {SkillRound} from "../components/skills/SkillRound";
+import "../../style/pages/app/infosPage/InfosPage.scss"
+import {HeaderButton} from "../../components/header/HeaderButton";
+import {SkillBar} from "../../components/skills/SkillBar";
+import {SkillRound} from "../../components/skills/SkillRound";
 
 export function InfosPage() {
 

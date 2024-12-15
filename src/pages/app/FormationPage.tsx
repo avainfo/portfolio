@@ -1,5 +1,5 @@
-import "../style/pages/formationPage/FormationPage.scss";
-import {ImageCard} from "../components/card/ImageCard";
+import "../../style/pages/app/formationPage/FormationPage.scss";
+import {ImageCard} from "../../components/card/ImageCard";
 
 export function FormationPage() {
 
