@@ -1,16 +1,10 @@
 import "../style/pages/projectPage/ProjectPage.scss";
 import {ImageCard} from "../components/card/ImageCard";
+import json from "../projects.json";
 
 export function ProjectPage() {
 
-    const projects = [
-        ["Amazon Meet", "projects/amazon_meets"],
-        ["Miroir connecté", "projects/connected_mirror"],
-        ["Remercee", "projects/remercee"],
-        ["Ava Maths", "projects/ava_maths"],
-        ["The Transporter", "projects/transporter"],
-        ["Kasa", "projects/kasa"],
-    ]
+    const projects = json.projects;
 
     return (
         <div>
@@ -18,7 +12,7 @@ export function ProjectPage() {
             <div className="projects">
                 {
                     projects.map((project, i) => {
-                        return <ImageCard title={project[0]} img={project[1] + ".png"} key={i}/>
+                        return <ImageCard title={project.title} img={project.path + ".png"} key={i}/>
                     })
                 }
             </div>
