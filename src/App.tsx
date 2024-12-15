@@ -21,7 +21,7 @@ function App() {
     const [backgroundUrl, setBackgroundUrl] = useState("/assets/card-front.png");
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/portfolio">
             <Routes>
                 <Route path="/" element={
                     <div className="app">
