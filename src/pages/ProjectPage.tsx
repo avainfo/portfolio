@@ -13,10 +13,13 @@ export function ProjectPage() {
     ]
 
     return (
-        <div className="projects">
-            {projects.map((project) => {
-                return <Project title={project[0]} img={project[1] + ".png"}/>
-            })}
+        <div>
+            <h1 className="title-page">Projets</h1>
+            <div className="projects">
+                {projects.map((project) => {
+                    return <Project title={project[0]} img={project[1] + ".png"}/>
+                })}
+            </div>
         </div>
     );
 }

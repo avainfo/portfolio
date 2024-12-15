@@ -1,8 +1,17 @@
 @import "../../variables";
 
+.title-page {
+  margin: {
+    top: calc(100vh / 18 + 7.5vh);
+    bottom: 7.5vh;
+  }
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
 .projects {
   margin: {
-	top: calc(100vh / 18 + 10vh);
 	bottom: 10vh;
 	left: 10vw;
   }
