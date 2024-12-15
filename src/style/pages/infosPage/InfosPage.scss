@@ -31,16 +31,30 @@
 
   .skill-part {
 	width: calc(50% - (100vw * 0.05) * 2);
+	height: 75vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 5vh;
 	margin: {
 	  left: calc(100vw * 0.05);
 	  right: calc(100vw * 0.05);
 	};
 
 	.skill-bars {
+	  margin-top: 10vh;
 	  height: 25vh;
 	  display: flex;
 	  flex-direction: column;
 	  justify-content: space-between;
+	}
+
+	.skill-rounds {
+	  height: 25vh;
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-between;
+	  align-items: center;
 	}
   }
 }

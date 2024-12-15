@@ -2,6 +2,7 @@ import React from "react";
 import "../style/pages/infosPage/InfosPage.scss"
 import {HeaderButton} from "../components/header/HeaderButton";
 import {SkillBar} from "../components/skills/SkillBar";
+import {SkillRound} from "../components/skills/SkillRound";
 
 export function InfosPage() {
 
@@ -14,11 +15,13 @@ export function InfosPage() {
 		["Pentesting", 75],
 	];
 
-	function test() {
-		console.log(techSkills);
-	}
-
-	test();
+	const techs = [
+		["Flutter & Dart", "#04599C"],
+		["Java", "#E5322C"],
+		["React Native", "#61DBFB"],
+		["JavaScript", "#EFD81D"],
+		["Problem solving", "#13C860"],
+	];
 
 	return (
 		<div className="infos">
@@ -41,6 +44,11 @@ export function InfosPage() {
 					}
 				</div>
 				<div className="skill-rounds">
+					{
+						techs.map((techs, i) => {
+							return <SkillRound techs={techs} id={i} key={i}/>
+						})
+					}
 				</div>
 			</div>
 		</div>
