@@ -1,0 +1,17 @@
+@import "../../variables";
+
+.formations {
+  margin: {
+	bottom: 10vh;
+	left: 10vw;
+  }
+
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  column-gap: 10vw;
+  row-gap: 10vh;
+}

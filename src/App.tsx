@@ -6,6 +6,7 @@ import {Links} from "./components/utils/Links";
 import {MainPage} from "./pages/MainPage";
 import {InfosPage} from "./pages/InfosPage";
 import {ProjectPage} from "./pages/ProjectPage";
+import {FormationPage} from "./pages/FormationPage";
 
 function App() {
 	let header: Array<string> = [
@@ -65,6 +66,7 @@ function App() {
 			<MainPage event={(value) => setBackgroundUrl(value)} backgroundUrl={backgroundUrl}/>
 			<InfosPage/>
 			<ProjectPage/>
+			<FormationPage/>
 		</div>
 	);
 }

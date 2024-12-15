@@ -1,24 +1,26 @@
-import {Project} from "../components/project/Project";
 import "../style/pages/projectPage/ProjectPage.scss";
+import {ImageCard} from "../components/card/ImageCard";
 
 export function ProjectPage() {
 
     const projects = [
-        ["Amazon Meet", "amazon_meets"],
-        ["Miroir connecté", "connected_mirror"],
-        ["Remercee", "remercee"],
-        ["Ava Maths", "ava_maths"],
-        ["The Transporter", "transporter"],
-        ["Kasa", "kasa"],
+        ["Amazon Meet", "projects/amazon_meets"],
+        ["Miroir connecté", "projects/connected_mirror"],
+        ["Remercee", "projects/remercee"],
+        ["Ava Maths", "projects/ava_maths"],
+        ["The Transporter", "projects/transporter"],
+        ["Kasa", "projects/kasa"],
     ]
 
     return (
         <div>
             <h1 className="title-page">Projets</h1>
             <div className="projects">
-                {projects.map((project) => {
-                    return <Project title={project[0]} img={project[1] + ".png"}/>
-                })}
+                {
+                    projects.map((project, i) => {
+                        return <ImageCard title={project[0]} img={project[1] + ".png"} key={i}/>
+                    })
+                }
             </div>
         </div>
     );
