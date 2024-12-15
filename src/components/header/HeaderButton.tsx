@@ -1,11 +1,17 @@
 import "../../style/header/HeaderButton.scss"
+import {useNavigate} from "react-router-dom";
 
 interface HeaderButtonProps {
-	title?: string
+    title?: string
 }
 
 export function HeaderButton({title}: HeaderButtonProps) {
-	return (
-		<div className="headerButton">{title}</div>
-	);
+    const navigate = useNavigate();
+    return (
+        <div className="headerButton" onClick={event => {
+            navigate("/contact")
+        }}>
+            {title}
+        </div>
+    );
 }

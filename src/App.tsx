@@ -9,6 +9,7 @@ import {ProjectPage} from "./pages/app/ProjectPage";
 import {FormationPage} from "./pages/app/FormationPage";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {ProjectInfosPage} from "./pages/project/ProjectInfosPage";
+import ContactPage from "./pages/contact/ContactPage";
 
 function App() {
     let header: Array<string> = [
@@ -37,6 +38,7 @@ function App() {
                     </div>
                 }/>
                 <Route path="/project/:id" element={<ProjectInfosPage/>}/>
+                <Route path="/contact" element={<ContactPage/>}/>
             </Routes>
         </BrowserRouter>
     );

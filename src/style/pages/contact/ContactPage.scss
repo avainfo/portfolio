@@ -1,0 +1,103 @@
+@import "../../variables";
+
+.contact-page {
+	width: 100vw;
+	min-height: 100vh;
+	background-color: $gray;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	h1 {
+		margin-bottom: 5vh;
+	}
+
+	.success-message {
+		background-color: #6dbf6d;
+		color: black;
+		padding: 1vw;
+		border-radius: 5px;
+		margin-bottom: 2vh;
+	}
+
+	.error-message {
+		background-color: $redAccent;
+		color: white;
+		padding: 1vw;
+		border-radius: 5px;
+		margin-bottom: 2vh;
+	}
+
+	.contact-form {
+		width: 50vw;
+		background-color: #202020;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+		.form-group {
+			margin-bottom: 2vh;
+			margin:{
+				top: 5vh;
+				left: 5vw;
+				right: 5vw;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 1vh;
+				color: white;
+			}
+
+			input,
+			textarea {
+				padding: {
+					top: 1.5vh;
+					bottom: 1.5vh;
+					left: 1vw;
+					right: 1vw;
+				};
+				width: calc(50vw - 12vw - 4px);
+				border: 2px solid $gray;
+				border-radius: 5px;
+				background-color: $gray;
+				color: white;
+				resize: vertical;
+
+				&::placeholder {
+					color: #888;
+				}
+
+				&:focus {
+					outline: none;
+					border: 2px solid $red;
+					transition-duration: 1s;
+				}
+			}
+		}
+
+		textarea {
+			min-height: 100px;
+		}
+
+		.btn-submit {
+			width: 25vw;
+			padding: 0.75rem;
+			margin-left: 12.5vw;
+			margin-top: calc(5vh - 1.5vh);
+			margin-bottom: 5vh;
+			background-color: $red;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			font-size: 1rem;
+			cursor: pointer;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: $redAccent;
+			}
+		}
+	}
+}
